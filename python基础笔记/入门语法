@@ -1,0 +1,180 @@
+基础
+	注释
+		#单行注释
+		‘’‘ …… ’‘’  或 “”“ ……”“”  多行注释
+	运算符
+		算术运算符
+			加号+
+			减-
+			乘*
+			除/
+			整除//
+			取余%
+			幂**
+		比较运算符
+			大于>
+			大于等于>=
+			小于<
+			小于等于<=
+			等于==
+			不等于！=
+		逻辑运算符
+			与and
+			或or
+			非not
+		位运算符
+			取反~
+			与&
+			或`
+			异或^
+			左移<<
+			右移>>
+		三元运算符
+			X if X<Y else Y
+		其他运算符
+			存在in
+			不存在not in
+			是is
+			不是not is
+	变量
+		字母、数值、下划线（数字不能开头、区分大小写）
+		数值变量
+			整型、浮点型、布尔型
+		容器变量
+			字符串、元组、列表、字典、集合
+	数据类型
+		整型int
+		浮点型float
+			保留小数点decimal
+				调整精度getcontext().prec(默认28)（）
+		布尔型bool
+
+位运算
+	原码
+		原码
+			二进制
+		反码
+			正数的反码>>原码
+负数的反码是符号位不变，其余位取反
+		补码
+			正数补码就是原码
+附属的补码就是反码+1
+		符号位
+			最高位是符号位
+0是正数，1是负数
+	按位运算
+		非~
+		与&
+		或|
+		异或^
+		左移<<
+		右移>>
+	快速计算
+		>> \ <<  2的倍数
+		^ 交换整数
+		& 获取前面为1位置的整数
+	整数整合
+		补码形式
+
+条件语句
+	if
+		if expression:
+            expr_true_suite
+	if-else
+	if-elif-else
+	assert
+		断言：后面条件为false，自动崩毁抛出异常
+
+循环语句
+	while
+		while 布尔表达式:
+            代码块
+	while-else
+	for
+		迭代循环
+			for 迭代变量 in 可迭代对象:
+                 代码块
+	for-else
+	range()
+		range(2，9)
+			2-8 
+		range(2，9，2)
+			2，4，6，8
+	enumerate()
+		迭代函数
+	子主题 1
+		continue
+			终止本轮循环
+		pass
+			不处理
+		break
+			跳出所在层循环
+	推导式
+		列表推导式
+			[ expr for value in collection [if condition] ]
+		元组推导式
+			( expr for value in collection [if condition] )
+		字典推导式
+			{ key_expr: value_expr for value in collection [if condition] }
+		集合推导式
+			{ expr for value in collection [if condition] }
+
+异常处理
+	异常
+		BaseException：所有异常的 基类
+		Exception：常规异常的 基类
+		StandardError：所有的内建标准异常的基类
+		ArithmeticError：所有数值计算异常的基类
+		FloatingPointError：浮点计算异常
+		OverflowError：数值运算超出最大限制
+		ZeroDivisionError：除数为零
+		AssertionError：断言语句（assert）失败
+		AttributeError：尝试访问未知的对象属性
+		EOFError：没有内建输入，到达EOF标记
+		EnvironmentError：操作系统异常的基类
+		IOError：输入/输出操作失败
+		OSError：操作系统产生的异常（例如打开一个不存在的文件）
+		WindowsError：系统调用失败
+		ImportError：导入模块失败的时候
+		KeyboardInterrupt：用户中断执行
+		LookupError：无效数据查询的基类
+		IndexError：索引超出序列的范围
+		KeyError：字典中查找一个不存在的关键字
+		MemoryError：内存溢出（可通过删除对象释放内存）
+		NameError：尝试访问一个不存在的变量
+		UnboundLocalError：访问未初始化的本地变量
+		ReferenceError：弱引用试图访问已经垃圾回收了的对象
+		RuntimeError：一般的运行时异常
+		NotImplementedError：尚未实现的方法
+		SyntaxError：语法错误导致的异常
+		IndentationError：缩进错误导致的异常
+		TabError：Tab和空格混用
+		SystemError：一般的解释器系统异常
+		TypeError：不同类型间的无效操作
+		ValueError：传入无效的参数
+		UnicodeError：Unicode相关的异常
+		UnicodeDecodeError：Unicode解码时的异常
+		UnicodeEncodeError：Unicode编码错误导致的异常
+		UnicodeTranslateError：Unicode转换错误导致的异常
+	警告
+		Warning：警告的基类
+		DeprecationWarning：关于被弃用的特征的警告
+		FutureWarning：关于构造将来语义会有改变的警告
+		UserWarning：用户代码生成的警告
+		PendingDeprecationWarning：关于特性将会被废弃的警告
+		RuntimeWarning：可疑的运行时行为(runtime behavior)的警告
+		SyntaxWarning：可疑语法的警告
+		ImportWarning：用于在导入模块过程中触发的警告
+		UnicodeWarning：与Unicode相关的警告
+		BytesWarning：与字节或字节码相关的警告
+		ResourceWarning：与资源使用相关的警告
+	try-except
+		try:
+		    检测范围
+		except Exception[as reason]:
+		    出现异常后的处理代码
+	try-except-finally
+		finally子句都会执行。
+	try-except-else
+	raise
+		抛出指定异常
